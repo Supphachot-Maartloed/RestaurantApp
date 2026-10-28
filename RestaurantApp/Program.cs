@@ -34,6 +34,7 @@ namespace RestaurantApp
             new Restaurant(4, "Haidilao Hot Pot", "Hot Pot", 4.8),
             new Restaurant(5, "Peking Garden", "Chinese Cuisine", 4.4)
             };
+
             foreach (Restaurant restaurant in restaurants)
             {
                 Console.WriteLine(
@@ -42,6 +43,27 @@ namespace RestaurantApp
                     $"ประเภท: {restaurant.Type}, " +
                     $"คะแนน: {restaurant.Rating}");
             }
+
+            Console.WriteLine("------------------------------");
+
+            Console.WriteLine($"จำนวนร้านทั้งหมด: {restaurants.Count}");
+
+            double averageRating = 0;
+
+            if (restaurants.Count > 0)
+            {
+                double totalRating = 0;
+
+                foreach (Restaurant restaurant in restaurants)
+                {
+                    totalRating += restaurant.Rating;
+                }
+
+                averageRating = totalRating / restaurants.Count;
+            }
+
+            Console.WriteLine($"คะแนนเฉลี่ย: {averageRating:F2}");
+
         }
     }
 }
