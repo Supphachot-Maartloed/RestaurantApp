@@ -63,6 +63,7 @@ namespace RestaurantApp
             }
 
             Console.WriteLine($"คะแนนเฉลี่ย: {averageRating:F2}");
+            Console.WriteLine("โปรแกรมจัดการร้านอาหารเสร็จสมบูรณ์แล้ว");
 
         }
     }
